@@ -1,7 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #eefeea;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 #root {
@@ -59,6 +64,8 @@ body {
   grid-template-columns: 1fr 1fr;
   height: 100vh;
   align-items: center;
+  direction: ltr; /* Changed from rtl to ltr */
+  place-items: center;
 }
 
 .home-grid > div:first-child {
@@ -67,6 +74,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home-grid > div:last-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 2rem;
 }
 
 .scrolling-columns {
@@ -80,6 +94,7 @@ body {
   position: relative;
   z-index: 1;
   margin-left: 7%;
+  text-align: right;
 }
 
 .scrolling-columns::after {
@@ -139,16 +154,21 @@ body {
 .waitlist-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   color: black;
-  padding-left: 15%;
+  padding-left: 0;
   position: relative;
+  text-align: left;
+  margin-left: 40%;
 }
 
 .waitlist-container h1 {
   font-size: 4.5rem;
   margin-bottom: 2rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  text-align: left;
 }
 
 .waitlist-box {
@@ -165,12 +185,14 @@ body {
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1), 0 0 3rem rgba(34, 139, 34, 0.1), 0 0 6rem rgba(34, 139, 34, 0.05);
   align-self: flex-start;
   max-width: max-content;
+  margin-left: 0;
 }
 
 .waitlist-box form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .waitlist-box input {
@@ -187,6 +209,7 @@ body {
   outline: none;
   color: black;
   padding-right: 2rem !important;
+  text-align: left;
 }
 
 .waitlist-box button {
@@ -219,7 +242,7 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   margin: 0;
 }
 
@@ -230,21 +253,21 @@ h1 {
   align-items: flex-start;
 }
 
-
 .titletext h1 {
   text-align: left !important;
 }
 .title1 {
-  font-size: 3.5rem !important;
-  margin-bottom: 0.7rem;
-  font-family: "Inter", sans-serif;
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 900 !important;
+  text-align: left !important;
 }
 
 .title2 {
-  font-size: 5rem !important; 
-  font-weight: bold !important;
-  margin-top: -2rem;
-  font-family: "Inter", sans-serif;
+  font-size: 6rem !important; 
+  font-weight: 900 !important;
+  margin-top: -2.5rem;
+  font-family: 'Nunito Sans', sans-serif !important;
+  text-align: left !important;
 }
 
 .features-carousel {
@@ -252,6 +275,8 @@ h1 {
   width: 100%;
   overflow: hidden;
   padding: 2rem 0;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 }
 
 .features-track {
@@ -276,33 +301,30 @@ h1 {
 .feature-explore {
   flex: 0 0 45vw;
   max-width: 35rem;
-  padding: 1.5rem;
+  padding: 2rem;
   min-height: 40vh;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
-  border-radius: 2rem;
+  border-radius: 3rem;
   user-select: none;
-  border: 0.125rem solid rgba(35, 183, 57, 0.15);
-  box-shadow: 
-    0 0.5rem 1.5rem rgba(0, 0, 0, 0.05),
-    0 0 0 0.125rem rgba(35, 183, 57, 0.1);
+  border: 0.15rem solid rgba(171, 208, 177, 0.15);
 }
 
 .feature-discover {
-  background: linear-gradient(135deg, rgba(246, 254, 244, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
 }
 
 .feature-connect {
-  background: linear-gradient(135deg, rgba(232, 253, 228, 0.9) 0%, rgba(217, 252, 211, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
 }
 
 .feature-explore {
-  background: linear-gradient(135deg, rgba(246, 254, 244, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
 }
 
 
@@ -316,7 +338,7 @@ h1 {
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .phone-mockup {
@@ -330,7 +352,7 @@ h1 {
     0 1rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
-  order: 0;
+  order: 2;
   flex-shrink: 0;
 }
 
@@ -340,7 +362,7 @@ h1 {
 
 /* Remove phone-right specific styles since all phones should be on the left */
 .phone-mockup.phone-right {
-  order: 0;
+  order: 2;
 }
 
 .showcase-content {
@@ -417,6 +439,19 @@ h1 {
 .badge:hover {
   transform: translateY(-0.25rem);
   background: rgba(35, 183, 57, 0.15);
+}
+
+.feature-title {
+  font-size: 3.5rem;
+  margin-bottom: 3.5rem;
+  background: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 900 !important;
 }
 
 @media (max-width: 768px) {
