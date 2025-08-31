@@ -51,12 +51,32 @@ function App() {
           <span className="nav-item">Contact</span>
         </div>
       </nav>
-      <div className="container">
-        <div className="home-grid">
+      <div className="main-content">
+        <div className="background-container">
+          <img 
+            src="/public/icons/mangostickyrice.png" 
+            alt="Mango Sticky Rice Sticker" 
+            className="title-sticker mangostickyrice-sticker"
+          />
+          <img 
+            src="/public/icons/parfait.png" 
+            alt="Parfait Sticker" 
+            className="title-sticker parfait-sticker"
+          />
+          <img 
+            src="/public/icons/croissant.png" 
+            alt="Croissant Sticker" 
+            className="title-sticker croissant-sticker"
+          />
+          <img 
+            src="/public/icons/sushi.png" 
+            alt="Sushi Sticker" 
+            className="title-sticker sushi-sticker"
+          />
           <div className="waitlist-container">
             <div className="titletext">
               <h1 className="title1">JOIN THE</h1>
-              <h1 className="title2"><span style={{ color: '#23b739ff' }}>MUNCH</span>-MENT</h1>
+              <h1 className="title2"><span style={{ color: '#3e974bff' }}>MUNCH</span>-MENT</h1>
             </div>
             <div className="waitlist-box">
               <form onSubmit={handleJoinWaitlist}>
@@ -81,75 +101,30 @@ function App() {
               </form>
             </div>
           </div>
-          <div className="scrolling-columns">
-            <div className="scroll-column scroll-column-left">
-              {/* First set of boxes */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Second set - duplicate for seamless loop */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Third set - extra for smooth transition */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Fourth set */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Fifth set */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Sixth set */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Seventh set */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-              {/* Eighth set */}
-              <div className="scroll-box box-color-1"></div>
-              <div className="scroll-box box-color-2"></div>
-              <div className="scroll-box box-color-3"></div>
-            </div>
-            <div className="scroll-column scroll-column-right">
-              {/* First set of boxes */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Second set - duplicate for seamless loop */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Third set - extra for smooth transition */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Fourth set */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Fifth set */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Sixth set */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Seventh set */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-              {/* Eighth set */}
-              <div className="scroll-box box-color-4"></div>
-              <div className="scroll-box box-color-5"></div>
-              <div className="scroll-box box-color-6"></div>
-            </div>
+        </div>
+        <div className="scrolling-rows">
+          <div className="scroll-row scroll-row-1">
+            {/* First set of boxes */}
+            <div className="scroll-box box-color-1"></div>
+            <div className="scroll-box box-color-2"></div>
+            <div className="scroll-box box-color-3"></div>
+            <div className="scroll-box box-color-4"></div>
+            <div className="scroll-box box-color-5"></div>
+            <div className="scroll-box box-color-6"></div>
+            {/* Second set - duplicate for seamless loop */}
+            <div className="scroll-box box-color-1"></div>
+            <div className="scroll-box box-color-2"></div>
+            <div className="scroll-box box-color-3"></div>
+            <div className="scroll-box box-color-4"></div>
+            <div className="scroll-box box-color-5"></div>
+            <div className="scroll-box box-color-6"></div>
+            {/* Third set - extra for smooth transition */}
+            <div className="scroll-box box-color-1"></div>
+            <div className="scroll-box box-color-2"></div>
+            <div className="scroll-box box-color-3"></div>
+            <div className="scroll-box box-color-4"></div>
+            <div className="scroll-box box-color-5"></div>
+            <div className="scroll-box box-color-6"></div>
           </div>
         </div>
       </div>

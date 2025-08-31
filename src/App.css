@@ -30,14 +30,16 @@ html {
   justify-content: space-between;
   align-items: center;
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(0.625rem);
-  -webkit-backdrop-filter: blur(0.625rem);
+  backdrop-filter: blur(0.725rem);
+  -webkit-backdrop-filter: blur(0.85rem);
   border: 0.0625rem solid rgba(255, 255, 255, 0.18);
   padding: 1rem 1.5rem;
   border-radius: 1.125rem;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
   color: black;
+  max-width: 120ch; /* Restrict navbar width */
+  margin: 0 auto; /* Center the navbar horizontally */
 }
 
 .nav-left {
@@ -46,8 +48,9 @@ html {
 }
 
 .nav-logo {
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1.5rem;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .nav-right {
@@ -59,83 +62,114 @@ html {
   cursor: pointer;
   transition: opacity 0.2s ease;
   font-size: 1.1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
 }
 
 .nav-item:hover {
   opacity: 0.7;
 }
 
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  align-items: flex-start;
-  direction: ltr; /* Changed from rtl to ltr */
-  place-items: center;
-}
-
-.home-grid > div:first-child {
-  width: 100%;
-  height: 100%;
+.main-content {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
   justify-content: center;
 }
 
-.home-grid > div:last-child {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-left: 2rem;
-}
-
-.scrolling-columns {
-  display: flex;
-  gap: 4rem;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
+.background-container {
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 2rem 2rem; /* Remove rounding from top-left and top-right corners */
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  padding: 6rem 2rem;
+  width: calc(100% - 7rem); /* Adjust width to exclude scrollbar */
   position: relative;
-  z-index: 1;
-  margin-left: 7%;
-  text-align: right;
+  overflow: hidden;
+  padding-top: 15rem;
 }
 
-.scrolling-columns::after {
+.background-container::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 6rem;
-  background: linear-gradient(to bottom,rgba(238, 254, 234, 0), rgba(238, 254, 234, 0.274), rgba(255, 255, 255, 0.772), rgba(255, 255, 255, 0.992), rgb(255, 255, 255));
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  border-radius: 2rem;
+}
+
+.waitlist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.scrolling-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  height: 21.44rem;
+  margin-top: 6rem;
+}
+
+.scroll-row {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  height: 19.44rem;
+  width: max-content;
+}
+
+.scroll-row-1 {
+  animation: scrollHorizontal 60s linear infinite;
+}
+
+.scrolling-rows::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
   pointer-events: none;
   z-index: 2;
 }
 
-.scroll-column {
-  width: 19.44rem;
+.scrolling-rows::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6rem;
   height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.scroll-column-left {
-  animation: scrollDown 20s linear infinite;
-}
-
-.scroll-column-right {
-  animation: scrollDown 25s linear infinite;
-  margin-top: 8rem; /* Off-beat offset */
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 2;
 }
 
 .scroll-box {
   width: 19.44rem;
-  height: 35.64rem;
+  height: 19.44rem;
   border-radius: 1.5rem;
   flex-shrink: 0;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
@@ -148,24 +182,23 @@ html {
 .box-color-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
 .box-color-6 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
 
-@keyframes scrollDown {
+@keyframes scrollHorizontal {
   0% {
-    transform: translateY(-300vh);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(calc(-300vh + (35.64rem + 4rem) * 3));
+    transform: translateX(calc(-50%));
   }
 }
 
 .waitlist-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   color: black;
-  padding-left: 0;
-  position: relative;
-  text-align: left;
+  padding: 2rem;
+  margin-bottom: 4rem;
 }
 
 .waitlist-container h1 {
@@ -183,12 +216,12 @@ html {
   margin-top: 1rem;
   padding: 3rem; /* Equal padding on all sides for better centering */
   border-radius: 2.5rem;
-  background: linear-gradient(135deg, rgba(61, 219, 103, 0.15), rgba(49, 172, 40, 0.486));
+  background: linear-gradient(140deg, rgba(5, 145, 42, 0.11), rgba(51, 124, 31, 0.611));
   backdrop-filter: blur(0.625rem);
   -webkit-backdrop-filter: blur(0.625rem);
-  border: 0.0625rem solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1), 0 0 3rem rgba(34, 139, 34, 0.1), 0 0 6rem rgba(34, 139, 34, 0.05);
-  align-self: flex-start;
+  /* border: 0.0825rem solid rgba(5, 145, 42, 0.042); */
+  /* box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1), 0 0 3rem rgba(34, 139, 34, 0.1), 0 0 6rem rgba(34, 139, 34, 0.05); */
+  align-self: center;
   max-width: max-content;
   margin-left: 0;
 }
@@ -206,27 +239,31 @@ html {
   border: none;
   font-size: 1.2rem;
   width: 30rem;
-  background: rgba(255, 255, 255, 0.70);
+  background: rgba(255, 255, 255, 0.845);
   backdrop-filter: blur(0.625rem);
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(0.625rem);
   border: 0.0625rem solid rgba(255, 255, 255, 0.18);
   outline: none;
-  color: black;
+  color: rgb(0, 0, 0);
   padding-right: 2rem !important;
   text-align: left;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
 }
 
 .waitlist-box button {
   padding: 1.2rem 2rem;
   border-radius: 50rem;
   border: none;
-  background-color: #228B22;
-  min-width: 10rem;
+  background-color: #365336;
+  min-width: 30rem;
   width: fit-content;
   align-self: flex-start;
-  color: white;
+  color: rgb(231, 234, 230);
   font-size: 1.2rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
@@ -255,25 +292,61 @@ h1 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.title-sticker {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none; /* Allow clicking through the sticker */
+  /* Use transform to position relative to container center */
+}
+
+.mangostickyrice-sticker {
+  left: 50%;
+  top: 50%;
+  transform: translate(-600px, -150px) rotate(-10deg);
+}
+
+.parfait-sticker {
+  left: 50%;
+  top: 50%;
+  transform: translate(-540px, 100px) rotate(15deg);
+}
+
+.croissant-sticker {
+  left: 50%;
+  top: 50%;
+  transform: translate(400px, -170px) rotate(5deg);
+}
+
+.sushi-sticker {
+  left: 50%;
+  top: 50%;
+  transform: translate(350px, 80px) rotate(0deg);
 }
 
 .titletext h1 {
-  text-align: left !important;
+  text-align: center !important;
 }
 .title1 {
   font-family: 'Nunito Sans', sans-serif !important;
   font-weight: 900 !important;
-  text-align: left !important;
-  font-size: 3rem !important;
+  text-align: center !important;
+  font-size: 3.5rem !important;
+  color: white;
 }
 
 .title2 {
-  font-size: 4.5rem !important; 
+  font-size: 6rem !important; 
   font-weight: 900 !important;
   margin-top: -2.5rem;
   font-family: 'Nunito Sans', sans-serif !important;
-  text-align: left !important;
+  text-align: center !important;
+  color: white;
 }
 
 .features-carousel {
@@ -281,7 +354,7 @@ h1 {
   width: 100%;
   overflow: hidden;
   padding: 2rem 0;
-  padding-top: 15rem;
+  padding-top: 10rem;
   padding-bottom: 25rem;
 }
 
