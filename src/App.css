@@ -5,6 +5,12 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 120ch;  /* keeps content from getting too wide */
+  margin: 0 auto;     /* centers horizontally */
+  padding: 0 1rem;    /* small padding on sides for mobile */
+}
+
 html {
   overflow-x: hidden;
 }
@@ -63,7 +69,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  align-items: center;
+  align-items: flex-start;
   direction: ltr; /* Changed from rtl to ltr */
   place-items: center;
 }
@@ -72,7 +78,7 @@ html {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -103,8 +109,8 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
-  background: linear-gradient(to bottom, rgba(238, 254, 234, 0), rgba(238, 254, 234, 1));
+  height: 6rem;
+  background: linear-gradient(to bottom,rgba(238, 254, 234, 0), rgba(238, 254, 234, 0.274), rgba(255, 255, 255, 0.772), rgba(255, 255, 255, 0.992), rgb(255, 255, 255));
   pointer-events: none;
   z-index: 2;
 }
@@ -154,13 +160,12 @@ html {
 .waitlist-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: black;
   padding-left: 0;
   position: relative;
   text-align: left;
-  margin-left: 40%;
 }
 
 .waitlist-container h1 {
@@ -260,10 +265,11 @@ h1 {
   font-family: 'Nunito Sans', sans-serif !important;
   font-weight: 900 !important;
   text-align: left !important;
+  font-size: 3rem !important;
 }
 
 .title2 {
-  font-size: 6rem !important; 
+  font-size: 4.5rem !important; 
   font-weight: 900 !important;
   margin-top: -2.5rem;
   font-family: 'Nunito Sans', sans-serif !important;
@@ -276,12 +282,12 @@ h1 {
   overflow: hidden;
   padding: 2rem 0;
   padding-top: 15rem;
-  padding-bottom: 5rem;
+  padding-bottom: 25rem;
 }
 
 .features-track {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0 5vw;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -296,106 +302,84 @@ h1 {
   display: none; /* Chrome, Safari, Opera */
 }
 
-.feature-discover,
-.feature-connect,
-.feature-explore {
+.feature1,
+.feature2,
+.feature3,
+.feature4,
+.feature5,
+.feature6 {
   flex: 0 0 45vw;
-  max-width: 35rem;
-  padding: 2rem;
+  max-width: 30rem;
+  min-width: 25rem;
+  padding: 0rem;
   min-height: 40vh;
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
   border-radius: 3rem;
   user-select: none;
-  border: 0.15rem solid rgba(171, 208, 177, 0.15);
+  border: 0.13rem solid rgba(216, 216, 216, 0.302);
 }
 
-.feature-discover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
+.feature1 {
+  background: #f6fcf0;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
 }
 
-.feature-connect {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
+.feature2 {
+  background: #f6fcf0;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
 }
 
-.feature-explore {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%);
+.feature3 {
+  background: #f6fcf0;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
 }
 
+.feature4 {
+  background: #f6fcf0;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
+}
+
+.feature5 {
+  background: #f6fcf0;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
+}
+
+.feature6 {
+  background: #f6fcf0;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
+}
 
 
 .showcase-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   width: 100%;
   max-width: 35rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0rem;
   box-sizing: border-box;
   flex-direction: column;
 }
 
-.phone-mockup {
-  position: relative;
-  width: 16rem;
-  height: 32rem;
-  background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
-  border-radius: 2.5rem;
-  box-shadow: 
-    0 2.5rem 5rem rgba(0, 0, 0, 0.15),
-    0 1rem 1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+.mockup-image {
+  width: 22rem;
+  height: auto;
+  max-height: 32rem;
+  object-fit: contain;
   order: 2;
-  flex-shrink: 0;
-}
-
-.phone-mockup:hover {
-  transform: translateY(-0.5rem);
-}
-
-/* Remove phone-right specific styles since all phones should be on the left */
-.phone-mockup.phone-right {
-  order: 2;
+  border-radius: 1rem;
 }
 
 .showcase-content {
   order: 1;
-}
-
-.phone-screen {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  background: linear-gradient(135deg, #23b739 0%, #1a8c2b 100%);
-  border-radius: 2rem;
-  overflow: hidden;
-}
-
-.phone-notch {
-  position: absolute;
-  top: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8rem;
-  height: 1.5rem;
-  background: #2a2a2a;
-  border-radius: 0 0 1rem 1rem;
-  z-index: 1;
-}
-
-.app-interface {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 70%);
 }
 
 .showcase-content {
@@ -404,20 +388,13 @@ h1 {
 }
 
 .showcase-content h2 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #23b739 0%, #1a8c2b 100%);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  background: rgb(57, 57, 57);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 700;
-}
-
-.showcase-content p {
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
-  line-height: 1.5;
-  color: #4a4a4a;
-  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 .feature-badges {
@@ -442,7 +419,7 @@ h1 {
 }
 
 .feature-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 3.5rem;
   background: black;
   -webkit-background-clip: text;
