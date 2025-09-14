@@ -5,6 +5,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  all: unset;
+
+}
 .container {
   max-width: 120ch;  /* keeps content from getting too wide */
   margin: 0 auto;     /* centers horizontally */
@@ -354,8 +358,7 @@ h1 {
   width: 100%;
   overflow: hidden;
   padding: 2rem 0;
-  padding-top: 10rem;
-  padding-bottom: 25rem;
+
 }
 
 .features-track {
@@ -380,7 +383,8 @@ h1 {
 .feature3,
 .feature4,
 .feature5,
-.feature6 {
+.feature6, 
+.feature7{
   flex: 0 0 45vw;
   max-width: 30rem;
   min-width: 25rem;
@@ -390,7 +394,7 @@ h1 {
   gap: 2rem;
   align-items: flex-end;
   position: relative;
-  background: rgba(255, 255, 255, 0.5);
+  background: #f6fcf0;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
   border-radius: 3rem;
@@ -398,35 +402,6 @@ h1 {
   border: 0.13rem solid rgba(216, 216, 216, 0.302);
 }
 
-.feature1 {
-  background: #f6fcf0;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
-}
-
-.feature2 {
-  background: #f6fcf0;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
-}
-
-.feature3 {
-  background: #f6fcf0;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
-}
-
-.feature4 {
-  background: #f6fcf0;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
-}
-
-.feature5 {
-  background: #f6fcf0;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
-}
-
-.feature6 {
-  background: #f6fcf0;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 253, 228, 0.9) 100%); */
-}
 
 
 .showcase-container {
@@ -455,6 +430,9 @@ h1 {
   order: 1;
 }
 
+.showcase-content > h2 {
+  margin-top: 40px;
+}
 .showcase-content {
   flex: 1;
   max-width: 40rem;
@@ -528,4 +506,140 @@ h1 {
   .feature-badges {
     justify-content: center;
   }
+}
+
+
+/* Addded stuff */
+
+/* ...existing code... */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    margin-top: 1rem;
+  }
+  .background-container {
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    margin: 0;
+    width: 100vw;
+    margin-top: -8rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding-top: 15rem;
+  }
+  .scrolling-rows {
+    height: 12rem;
+    margin-top: 2rem;
+  }
+  .scroll-row {
+    height: 10rem;
+    gap: 1rem;
+  }
+  .scroll-box {
+    width: 8rem;
+    height: 10rem;
+    border-radius: 1rem;
+  }
+  .title-sticker {
+    width: 5rem;
+    height: 5rem;
+  }
+  .mangostickyrice-sticker,
+  .parfait-sticker,
+  .croissant-sticker,
+  .sushi-sticker {
+    display: none;
+  }
+  .titletext h1,
+  .title1,
+  .title2 {
+    font-size: 2rem !important;
+    margin-top: 0 !important;
+  }
+
+}
+
+/* Optional: further tweaks for very small screens */
+@media (max-width: 500px) {
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
+  .mockup-image {
+    max-height: 8rem;
+  }
+
+  .waitlist-container {
+    margin-top: 8rem;
+  }
+
+  .waitlist-box {
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 100%;
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+  .waitlist-box input,
+  .waitlist-box button {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .waitlist-container h1 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .features-carousel {
+    padding: 1rem 0;
+  }
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .features-track {
+    gap: 0.5rem;
+    padding: 0 1vw;
+    padding-bottom: 0.5rem;
+  }
+
+  .mockup-image {
+    width: 90vw;
+    max-width: 95vw;
+    max-height: 16rem; /* Increase from 8rem to 16rem for better visibility */
+    min-height: 8rem;
+    height: auto;
+    border-radius: 0.7rem;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .feature1,
+  .feature2,
+  .feature3,
+  .feature4,
+  .feature5,
+  .feature6,
+  .feature7 {
+    min-width: 95vw;
+    max-width: 98vw;
+    min-height: 12rem;
+    border-radius: 1.2rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showcase-container {
+    gap: 0.5rem;
+    max-width: 100vw;
+    padding: 0;
+  }
+
 }
