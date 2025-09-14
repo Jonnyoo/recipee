@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { db } from './firebase'
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore'
 
 function App() {
   const [name, setName] = useState('')
@@ -12,7 +12,6 @@ function App() {
   const handleJoinWaitlist = async (e) => {
     e.preventDefault()
 
-    // Basic validation
     if (!name.trim() || !email.trim()) {
       setMessage('Please fill in all fields')
       return
@@ -22,7 +21,16 @@ function App() {
     setMessage('')
 
     try {
-      // Add document to Firestore with random ID
+      // Check if email already exists
+      const q = query(collection(db, 'users'), where('email', '==', email.trim()))
+      const querySnapshot = await getDocs(q)
+      if (!querySnapshot.empty) {
+        setMessage('This email is already on the waitlist!')
+        setIsSubmitting(false)
+        return
+      }
+
+      // Add document to Firestore
       await addDoc(collection(db, 'users'), {
         name: name.trim(),
         email: email.trim(),
@@ -47,8 +55,7 @@ function App() {
           <span className="nav-logo">Munch</span>
         </div>
         <div className="nav-right">
-          <span className="nav-item">Waitlist</span>
-          <span className="nav-item">Contact</span>
+          <a href="#waitlist"><span className="nav-item">Waitlist</span></a>
         </div>
       </nav>
       <div className="main-content">
@@ -73,7 +80,7 @@ function App() {
             alt="Sushi Sticker" 
             className="title-sticker sushi-sticker"
           />
-          <div className="waitlist-container">
+          <div id="waitlist" className="waitlist-container">
             <div className="titletext">
               <h1 className="title1">JOIN THE</h1>
               <h1 className="title2"><span style={{ color: '#3e974bff' }}>MUNCH</span>-MENT</h1>
@@ -133,52 +140,66 @@ function App() {
         <div className="features-track">
           <div className="feature1">
             <div className="showcase-container">
-              <img src="/mockups/1031.png" alt="App mockup" className="mockup-image" />
+              <img src="/mockups/profile.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Experience the Future of Food</h2>
+                <h2>Connect with Foodies</h2>
               </div>
             </div>
           </div>
+
           <div className="feature2">
             <div className="showcase-container">
+              <img src="/mockups/home.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Connect with Food Lovers</h2>
+                <h2>Scroll through your Feed</h2>
               </div>
-              <img src="/mockups/1031.png" alt="App mockup" className="mockup-image" />
             </div>
           </div>
+
           <div className="feature3">
             <div className="showcase-container">
-              <img src="/mockups/1031.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Explore Local Gems</h2>
+                <h2>Share your Recipes</h2>
               </div>
+              <img src="/mockups/post.png" alt="App mockup" className="mockup-image" />
             </div>
           </div>
           <div className="feature4">
             <div className="showcase-container">
-              <img src="/mockups/1031.png" alt="App mockup" className="mockup-image" />
+              <img src="/mockups/recipe.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Explore Local Gems</h2>
+                <h2>Recipes from your Pantry</h2>
               </div>
             </div>
           </div>
+
           <div className="feature5">
             <div className="showcase-container">
-              <img src="/mockups/1031.png" alt="App mockup" className="mockup-image" />
+              <img src="/mockups/saved.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Explore Local Gems</h2>
+                <h2>Save your Recipes</h2>
               </div>
             </div>
           </div>
+
           <div className="feature6">
             <div className="showcase-container">
-              <img src="/mockups/1031.png" alt="App mockup" className="mockup-image" />
+              <img src="/mockups/meal prep.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Explore Local Gems</h2>
+                <h2>Meal Prep</h2>
               </div>
             </div>
           </div>
+
+          <div className="feature7">
+            <div className="showcase-container">
+              <img src="/mockups/grocery.png" alt="App mockup" className="mockup-image" />
+              <div className="showcase-content">
+                <h2>Plan your Groceries</h2>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div className="carousel-indicators">
           <span className="indicator active"></span>
