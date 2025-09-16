@@ -61,22 +61,22 @@ function App() {
       <div className="main-content">
         <div className="background-container">
           <img 
-            src="/public/icons/mangostickyrice.png" 
+            src="/icons/mangostickyrice.png" 
             alt="Mango Sticky Rice Sticker" 
             className="title-sticker mangostickyrice-sticker"
           />
           <img 
-            src="/public/icons/parfait.png" 
+            src="/icons/parfait.png" 
             alt="Parfait Sticker" 
             className="title-sticker parfait-sticker"
           />
           <img 
-            src="/public/icons/croissant.png" 
+            src="/icons/croissant.png" 
             alt="Croissant Sticker" 
             className="title-sticker croissant-sticker"
           />
           <img 
-            src="/public/icons/sushi.png" 
+            src="/icons/sushi.png" 
             alt="Sushi Sticker" 
             className="title-sticker sushi-sticker"
           />
