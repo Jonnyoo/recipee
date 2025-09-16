@@ -52,7 +52,7 @@ function App() {
     <>
       <nav className="navbar">
         <div className="nav-left">
-          <span className="nav-logo">Munch</span>
+          <span className="nav-logo">MUNCH</span>
         </div>
         <div className="nav-right">
           <a href="#waitlist"><span className="nav-item">Waitlist</span></a>
@@ -109,8 +109,15 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="scrolling-rows">
-          <div className="scroll-row scroll-row-1">
+        <div className="scrolling-section">
+          <div className="scrolling-text">
+            <h3 className="scrolling-subtitle">Social</h3>
+            <h2 className="scrolling-title">Join a Community of Foodies</h2>
+            <p className="scrolling-description">Connect, share, and discover recipes with fellow food enthusiasts. Munch brings food lovers together in one deliciously vibrant community.
+            </p>
+          </div>
+          <div className="scrolling-rows">
+            <div className="scroll-row scroll-row-1">
             {/* First set of boxes */}
             <div className="scroll-box box-color-1"></div>
             <div className="scroll-box box-color-2"></div>
@@ -134,9 +141,11 @@ function App() {
             <div className="scroll-box box-color-6"></div>
           </div>
         </div>
+        </div>
       </div>
       <div className="features-carousel">
-        <h1 className='feature-title'>Munch has features you'll love</h1>
+        <h3 className="features-subtitle">Features</h3>
+        <h1 className='feature-title'>Designed for Food Lovers</h1>
         <div className="features-track">
           <div className="feature1">
             <div className="showcase-container">
@@ -207,6 +216,93 @@ function App() {
           <span className="indicator"></span>
         </div>
       </div>
+      <div className='big-feature'>
+        <div className='big-feature-content'>
+          <h2>CAMERA</h2>
+          <h1>Just a snap away from delicious recipes</h1>
+          <p>Take a photo of your ingredients and let Munch do the rest. Discover recipes tailored to what you have on hand, making meal prep effortless and fun.</p>
+          <div className="big-feature-badges">
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">🤖</span>
+                AI-Powered
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">🔍</span>
+                Smart Ingredient Recognition
+              </span>
+            </div>
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">♻️</span>
+                Zero-Waste Cooking
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">👨‍🍳</span>
+                Personalized Recipes
+              </span>
+            </div>
+          </div>
+          <img src="/mockups/cameramockup.png" alt="Camera Mockup" className="big-feature-mockup" />
+        </div>
+      </div>
+      <div className='big-feature'>
+        <div className='big-feature-content'>
+          <h2>CAMERA</h2>
+          <h1>Just a snap away from delicious recipes</h1>
+          <p>Take a photo of your ingredients and let Munch do the rest. Discover recipes tailored to what you have on hand, making meal prep effortless and fun.</p>
+          <div className="big-feature-badges">
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">🤖</span>
+                AI-Powered
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">🔍</span>
+                Smart Ingredient Recognition
+              </span>
+            </div>
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">♻️</span>
+                Zero-Waste Cooking
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">👨‍🍳</span>
+                Personalized Recipes
+              </span>
+            </div>
+          </div>
+          <img src="/mockups/cameramockup.png" alt="Camera Mockup" className="big-feature-mockup" />
+        </div>
+      </div>
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>Munch</h3>
+            <p>The ultimate food companion.</p>
+          </div>
+          <div className="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#waitlist">Join Waitlist</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li>hello@munch.app</li>
+              <li>Follow us @munchapp</li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-image">
+          <img src="/images/footertext.png" alt="Footer Design" />
+        </div>
+      </footer>
+    
     </>
   )
 }
