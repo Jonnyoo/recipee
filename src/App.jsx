@@ -119,12 +119,12 @@ function App() {
           <div className="scrolling-rows">
             <div className="scroll-row scroll-row-1">
             {/* First set of boxes */}
-            <div className="scroll-box box-color-1"></div>
-            <div className="scroll-box box-color-2"></div>
-            <div className="scroll-box box-color-3"></div>
-            <div className="scroll-box box-color-4"></div>
-            <div className="scroll-box box-color-5"></div>
-            <div className="scroll-box box-color-6"></div>
+            <div className="scroll-box1 box-color-1"></div>
+            <div className="scroll-box2 box-color-2"></div>
+            <div className="scroll-box3 box-color-3"></div>
+            <div className="scroll-box4 box-color-4"></div>
+            <div className="scroll-box5 box-color-5"></div>
+            <div className="scroll-box6 box-color-6"></div>
             {/* Second set - duplicate for seamless loop */}
             <div className="scroll-box box-color-1"></div>
             <div className="scroll-box box-color-2"></div>
@@ -143,7 +143,7 @@ function App() {
         </div>
         </div>
       </div>
-      <div className="features-carousel">
+      <div id="features" className="features-carousel">
         <h3 className="features-subtitle">Features</h3>
         <h1 className='feature-title'>Designed for Food Lovers</h1>
         <div className="features-track">
@@ -282,21 +282,24 @@ function App() {
             <h3>Munch</h3>
             <p>The ultimate food companion.</p>
           </div>
+          
+          <div className="footer-section">
+              {/* <h4>Contact</h4>
+              <ul>
+                <li>hello@munch.app</li>
+                <li>Follow us @munchapp</li>
+              </ul> */}
+          </div>
+
+
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
               <li><a href="#waitlist">Join Waitlist</a></li>
               <li><a href="#features">Features</a></li>
-              <li><a href="#about">About</a></li>
             </ul>
           </div>
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <ul>
-              <li>hello@munch.app</li>
-              <li>Follow us @munchapp</li>
-            </ul>
-          </div>
+
         </div>
         <div className="footer-image">
           <img src="/images/footertext.png" alt="Footer Design" />
