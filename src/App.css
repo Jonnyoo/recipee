@@ -224,16 +224,44 @@ html {
   z-index: 2;
 }
 
-.scroll-box {
+.scroll-box1,
+.scroll-box2,
+.scroll-box3,
+.scroll-box4,
+.scroll-box5,
+.scroll-box6 {
   width: 20rem;
   height: 25rem;
   border-radius: 1.5rem;
   flex-shrink: 0;
-  background-image: url('/images/post.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.scroll-box1 {
+  background-image: url('/images/post 1.png');
+}
+
+.scroll-box2 {
+  background-image: url('/images/post 2.png');
+}
+
+.scroll-box3 {
+  background-image: url('/images/post 3.png');
+}
+
+.scroll-box4 {
+  background-image: url('/images/post 4.png');
+}
+
+.scroll-box5 {
+  background-image: url('/images/post 5.png');
+}
+
+.scroll-box6 {
+  background-image: url('/images/post 6.png');
 }
 
 @keyframes scrollHorizontal {
