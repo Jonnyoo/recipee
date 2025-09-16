@@ -109,9 +109,10 @@ function App() {
             </div>
           </div>
         </div>
+
+        
         <div className="scrolling-section">
           <div className="scrolling-text">
-            <h3 className="scrolling-subtitle">Social</h3>
             <h2 className="scrolling-title">Join a Community of Foodies</h2>
             <p className="scrolling-description">Connect, share, and discover recipes with fellow food enthusiasts. Munch brings food lovers together in one deliciously vibrant community.
             </p>
@@ -143,9 +144,71 @@ function App() {
         </div>
         </div>
       </div>
+      <div className='big-feature'>
+        <div className='big-feature-content'>
+          <h2>CAMERA</h2>
+          <h1>Just a snap away from delicious recipes</h1>
+          <p>Take a photo of your ingredients and let Munch do the rest. Discover recipes tailored to what you have on hand, making meal prep effortless and fun.</p>
+          <div className="big-feature-badges">
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">🤖</span>
+                AI-Powered
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">🔍</span>
+                Smart Ingredient Recognition
+              </span>
+            </div>
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">♻️</span>
+                Zero-Waste Cooking
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">👨‍🍳</span>
+                Personalized Recipes
+              </span>
+            </div>
+          </div>
+          <img src="/mockups/cameramockup.png" alt="Camera Mockup" className="big-feature-mockup" />
+        </div>
+      </div>
+      <div className='big-feature'>
+
+        <div className='big-feature-content'>
+          <h2>PERSONALIZED FEED</h2>
+          <h1>Always one scroll away from your next meal</h1>
+          <p>View what your friends are cooking and get real time inspiration! Share your food pics and discover new recipes together.</p>
+          <div className="big-feature-badges">
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">🤤</span>
+                Cook up Inspiration
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">🔍</span>
+                Find your Recipes
+              </span>
+            </div>
+            <div className="big-feature-badges-row">
+              <span className="big-feature-badge">
+                <span className="badge-icon">🌏</span>
+                Meet your Community
+              </span>
+              <span className="big-feature-badge">
+                <span className="badge-icon">🤳</span>
+                Share your Recipes
+              </span>
+            </div>
+          </div>
+          <img src="/mockups/homemockup.png" alt="Camera Mockup" className="big-feature-mockup" />
+        </div>
+      </div>
+
       <div id="features" className="features-carousel">
-        <h3 className="features-subtitle">Features</h3>
-        <h1 className='feature-title'>Designed for Food Lovers</h1>
+        <h3 className="features-subtitle">More Features</h3>
+        <h1 className='feature-title'>Designed just for You</h1>
         <div className="features-track">
           <div className="feature1">
             <div className="showcase-container">
@@ -177,7 +240,7 @@ function App() {
             <div className="showcase-container">
               <img src="/mockups/recipe.png" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
-                <h2>Recipes from your Pantry</h2>
+                <h2>Recipes Based off your Pantry</h2>
               </div>
             </div>
           </div>
@@ -216,66 +279,8 @@ function App() {
           <span className="indicator"></span>
         </div>
       </div>
-      <div className='big-feature'>
-        <div className='big-feature-content'>
-          <h2>CAMERA</h2>
-          <h1>Just a snap away from delicious recipes</h1>
-          <p>Take a photo of your ingredients and let Munch do the rest. Discover recipes tailored to what you have on hand, making meal prep effortless and fun.</p>
-          <div className="big-feature-badges">
-            <div className="big-feature-badges-row">
-              <span className="big-feature-badge">
-                <span className="badge-icon">🤖</span>
-                AI-Powered
-              </span>
-              <span className="big-feature-badge">
-                <span className="badge-icon">🔍</span>
-                Smart Ingredient Recognition
-              </span>
-            </div>
-            <div className="big-feature-badges-row">
-              <span className="big-feature-badge">
-                <span className="badge-icon">♻️</span>
-                Zero-Waste Cooking
-              </span>
-              <span className="big-feature-badge">
-                <span className="badge-icon">👨‍🍳</span>
-                Personalized Recipes
-              </span>
-            </div>
-          </div>
-          <img src="/mockups/cameramockup.png" alt="Camera Mockup" className="big-feature-mockup" />
-        </div>
-      </div>
-      <div className='big-feature'>
-        <div className='big-feature-content'>
-          <h2>CAMERA</h2>
-          <h1>Just a snap away from delicious recipes</h1>
-          <p>Take a photo of your ingredients and let Munch do the rest. Discover recipes tailored to what you have on hand, making meal prep effortless and fun.</p>
-          <div className="big-feature-badges">
-            <div className="big-feature-badges-row">
-              <span className="big-feature-badge">
-                <span className="badge-icon">🤖</span>
-                AI-Powered
-              </span>
-              <span className="big-feature-badge">
-                <span className="badge-icon">🔍</span>
-                Smart Ingredient Recognition
-              </span>
-            </div>
-            <div className="big-feature-badges-row">
-              <span className="big-feature-badge">
-                <span className="badge-icon">♻️</span>
-                Zero-Waste Cooking
-              </span>
-              <span className="big-feature-badge">
-                <span className="badge-icon">👨‍🍳</span>
-                Personalized Recipes
-              </span>
-            </div>
-          </div>
-          <img src="/mockups/cameramockup.png" alt="Camera Mockup" className="big-feature-mockup" />
-        </div>
-      </div>
+
+
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
