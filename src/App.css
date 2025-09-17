@@ -330,7 +330,7 @@ h1 {
 }
 
 .scroll-row-1 {
-  animation: scrollHorizontal 120s linear infinite;
+  animation: scrollHorizontal 30s linear infinite;
 }
 
 .scrolling-rows::after {
@@ -362,7 +362,8 @@ h1 {
 .scroll-box3,
 .scroll-box4,
 .scroll-box5,
-.scroll-box6 {
+.scroll-box6,
+.scroll-box {
   width: 20rem;
   height: 25rem;
   border-radius: 1.5rem;
@@ -394,6 +395,31 @@ h1 {
 }
 
 .scroll-box6 {
+  background-image: url('/images/post 6.png');
+}
+
+/* Box color classes for duplicated elements */
+.box-color-1 {
+  background-image: url('/images/post 1.png');
+}
+
+.box-color-2 {
+  background-image: url('/images/post 2.png');
+}
+
+.box-color-3 {
+  background-image: url('/images/post 3.png');
+}
+
+.box-color-4 {
+  background-image: url('/images/post 4.png');
+}
+
+.box-color-5 {
+  background-image: url('/images/post 5.png');
+}
+
+.box-color-6 {
   background-image: url('/images/post 6.png');
 }
 
@@ -938,7 +964,7 @@ h1 {
   }
   
   .features-carousel {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
   }
   
   .features-subtitle {

@@ -120,20 +120,13 @@ function App() {
           <div className="scrolling-rows">
             <div className="scroll-row scroll-row-1">
             {/* First set of boxes */}
-            <div className="scroll-box1 box-color-1"></div>
-            <div className="scroll-box2 box-color-2"></div>
-            <div className="scroll-box3 box-color-3"></div>
-            <div className="scroll-box4 box-color-4"></div>
-            <div className="scroll-box5 box-color-5"></div>
-            <div className="scroll-box6 box-color-6"></div>
-            {/* Second set - duplicate for seamless loop */}
-            <div className="scroll-box box-color-1"></div>
-            <div className="scroll-box box-color-2"></div>
-            <div className="scroll-box box-color-3"></div>
-            <div className="scroll-box box-color-4"></div>
-            <div className="scroll-box box-color-5"></div>
-            <div className="scroll-box box-color-6"></div>
-            {/* Third set - extra for smooth transition */}
+            <div className="scroll-box1"></div>
+            <div className="scroll-box2"></div>
+            <div className="scroll-box3"></div>
+            <div className="scroll-box4"></div>
+            <div className="scroll-box5"></div>
+            <div className="scroll-box6"></div>
+            {/* Second set - exact duplicate for seamless loop */}
             <div className="scroll-box box-color-1"></div>
             <div className="scroll-box box-color-2"></div>
             <div className="scroll-box box-color-3"></div>
