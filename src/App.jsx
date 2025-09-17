@@ -60,25 +60,30 @@ function App() {
       </nav>
       <div className="main-content">
         <div className="background-container">
-          <img 
+          {/* <img 
             src="/icons/mangostickyrice.webp" 
             alt="Mango Sticky Rice Sticker" 
             className="title-sticker mangostickyrice-sticker"
-          />
-          <img 
+          /> */}
+          {/* <img 
             src="/icons/parfait.webp" 
             alt="Parfait Sticker" 
             className="title-sticker parfait-sticker"
-          />
-          <img 
+          /> */}
+          {/* <img 
             src="/icons/croissant.webp" 
             alt="Croissant Sticker" 
             className="title-sticker croissant-sticker"
-          />
-          <img 
+          /> */}
+          {/* <img 
             src="/icons/sushi.webp" 
             alt="Sushi Sticker" 
             className="title-sticker sushi-sticker"
+          /> */}
+          <img 
+            src="/images/maincontentfood.webp" 
+            alt="Main Content Food" 
+            className="main-content-food-image"
           />
           <div id="waitlist" className="waitlist-container">
             <div className="titletext">

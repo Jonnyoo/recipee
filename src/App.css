@@ -275,7 +275,7 @@ h1 {
   pointer-events: none;
 }
 
-.mangostickyrice-sticker {
+/* .mangostickyrice-sticker {
   left: 10%;
   top: 20%;
   transform: rotate(-10deg);
@@ -297,6 +297,18 @@ h1 {
   right: 15%;
   bottom: 20%;
   transform: rotate(0deg);
+} */
+
+.main-content-food-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 80rem;
+  height: auto;
+  z-index: 15;
+  pointer-events: none;
 }
 
 .titletext h1 {
@@ -894,6 +906,20 @@ h1 {
 
 
 /* Mobile Responsiveness */
+@media (max-width: 1300px) {
+  .main-content-food-image {
+    max-width: 60rem;
+  }
+
+}
+
+@media (max-width: 1500px) {
+  .main-content-food-image {
+    max-width: 70rem;
+  }
+
+}
+
 @media (max-width: 768px) {
   .title2 {
     font-size: 4.5rem !important;
