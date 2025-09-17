@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import { db } from './firebase'
 import { collection, addDoc, query, where, getDocs } from 'firebase/firestore'
@@ -8,6 +8,8 @@ function App() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState('')
+  const [activeFeature, setActiveFeature] = useState(0)
+  const featuresTrackRef = useRef(null)
 
   const handleJoinWaitlist = async (e) => {
     e.preventDefault()
@@ -45,6 +47,81 @@ function App() {
       setMessage('Something went wrong. Please try again.')
     } finally {
       setIsSubmitting(false)
+    }
+  }
+
+  // Carousel functionality
+  useEffect(() => {
+    const handleScroll = () => {
+      const track = featuresTrackRef.current
+      if (!track) return
+
+      const scrollLeft = track.scrollLeft
+      const scrollWidth = track.scrollWidth
+      const clientWidth = track.clientWidth
+      const features = track.children
+      
+      // Check if at the very start (first feature)
+      if (scrollLeft <= 10) {
+        setActiveFeature(0)
+        return
+      }
+      
+      // Check if at the very end (last feature)
+      if (scrollLeft >= scrollWidth - clientWidth - 10) {
+        setActiveFeature(features.length - 1)
+        return
+      }
+
+      // For middle positions, use center-based detection
+      const trackRect = track.getBoundingClientRect()
+      const trackCenter = trackRect.left + trackRect.width / 2
+      
+      let closestFeature = 0
+      let minDistance = Infinity
+
+      for (let i = 0; i < features.length; i++) {
+        const feature = features[i]
+        const featureRect = feature.getBoundingClientRect()
+        const featureCenter = featureRect.left + featureRect.width / 2
+        const distance = Math.abs(featureCenter - trackCenter)
+        
+        if (distance < minDistance) {
+          minDistance = distance
+          closestFeature = i
+        }
+      }
+
+      setActiveFeature(closestFeature)
+    }
+
+    const track = featuresTrackRef.current
+    if (track) {
+      track.addEventListener('scroll', handleScroll)
+      handleScroll() // Initial call
+    }
+
+    return () => {
+      if (track) {
+        track.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [])
+
+  const scrollToFeature = (index) => {
+    const track = featuresTrackRef.current
+    if (!track) return
+
+    const feature = track.children[index]
+    if (feature) {
+      const trackRect = track.getBoundingClientRect()
+      const featureRect = feature.getBoundingClientRect()
+      const scrollLeft = track.scrollLeft + featureRect.left - trackRect.left - (trackRect.width - featureRect.width) / 2
+      
+      track.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -234,7 +311,7 @@ function App() {
       <div id="features" className="features-carousel">
         <h3 className="features-subtitle">More Features</h3>
         <h1 className='feature-title'>Designed just for You</h1>
-        <div className="features-track">
+        <div className="features-track" ref={featuresTrackRef}>
           <div className="feature1">
             <div className="showcase-container">
               <img src="mockups/profile.webp" alt="App mockup" className="mockup-image" />
@@ -299,9 +376,13 @@ function App() {
 
         </div>
         <div className="carousel-indicators">
-          <span className="indicator active"></span>
-          <span className="indicator"></span>
-          <span className="indicator"></span>
+          {[0, 1, 2, 3, 4, 5, 6].map((index) => (
+            <span
+              key={index}
+              className={`carousel-dot ${activeFeature === index ? 'active' : ''}`}
+              onClick={() => scrollToFeature(index)}
+            />
+          ))}
         </div>
       </div>
 

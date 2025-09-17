@@ -124,7 +124,7 @@ html {
   align-items: center;
   min-height: 100vh;
   justify-content: flex-start;
-  padding-top: 6rem;
+  padding-top: 1rem;
 }
 
 .background-container {
@@ -191,7 +191,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  margin-top: 1rem;
+  margin-top: 0rem;
   padding: 3rem;
   border-radius: 2.5rem 2.5rem 0 0;
   background: linear-gradient(140deg, rgba(5, 145, 42, 0.11), rgba(51, 124, 31, 0.611));
@@ -348,7 +348,7 @@ h1 {
   text-align: center !important;
   font-size: clamp(2rem, 5vw, 3.5rem) !important;
   color: white;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: -0.5rem !important;
   margin-top: 10rem !important;
 }
 
@@ -497,13 +497,12 @@ h1 {
 .features-track {
   display: flex;
   gap: 1.5rem;
-  padding: 0 5vw;
+  padding: 0 5vw 1rem calc(max((100vw - 110ch) / 2, 2rem));
   overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 1rem;
   overscroll-behavior-x: none;
 }
 
@@ -621,6 +620,33 @@ h1 {
   font-weight: 700 !important;
 }
 
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgba(2, 32, 7, 0.134);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: rgb(166, 205, 172);
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+  background-color: rgba(62, 151, 75, 0.6);
+}
+
 .big-feature {
   display: flex;
   justify-content: center;
@@ -721,6 +747,7 @@ h1 {
   position: relative;
   z-index: 1;
   max-width: 50%;
+  margin-right: 28rem;
 }
 
 .big-feature-badges {
@@ -954,6 +981,35 @@ h1 {
     max-width: 70rem;
   }
 
+  .title2 {
+    font-size: 6rem !important;
+  }
+
+  .waitlist-box {
+    padding: 2.5rem 2rem;
+    max-width: 400px;
+  }
+
+  .waitlist-box input,
+  .waitlist-box button {
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .main-content-food-image {
+    max-width: 60rem;
+  }
+
+  .feature1,
+.feature2,
+.feature3,
+.feature4,
+.feature5,
+.feature6,
+.feature7 {
+    max-width: 20rem;
+  }
+
 }
 
 @media (max-width: 1800px) {
@@ -978,6 +1034,10 @@ h1 {
 
   .title1 {
     font-size: 1.5rem !important;
+  }
+
+  .title2 {
+    margin-top: 1rem !important;
   }
 
   .titletext {
