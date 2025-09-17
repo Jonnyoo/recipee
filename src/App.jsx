@@ -81,7 +81,7 @@ function App() {
             className="title-sticker sushi-sticker"
           /> */}
           <img 
-            src="/images/maincontentfood.webp" 
+            src="images/maincontentfood.webp" 
             alt="Main Content Food" 
             className="main-content-food-image"
           />
@@ -90,6 +90,7 @@ function App() {
               <h1 className="title1">JOIN THE</h1>
               <h1 className="title2"><span style={{ color: '#3e974bff' }}>MUNCH</span>MENT</h1>
             </div>
+            {message && <p className="message">{message}</p>}
             <div className="waitlist-box">
               <form onSubmit={handleJoinWaitlist}>
                 <input
@@ -109,7 +110,6 @@ function App() {
                 <button type="submit" disabled={isSubmitting}>
                   {isSubmitting ? 'Joining...' : 'Join Waitlist'}
                 </button>
-                {message && <p className="message">{message}</p>}
               </form>
             </div>
           </div>
@@ -119,26 +119,26 @@ function App() {
           <h2 className="endorsement-header">Loved by students at top schools</h2>
           <div className="university-logos-container">
             <div className="university-logos-row">
-              <img src="/logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
-              <img src="/logos/uoftlogo.webp" alt="University of Toronto" className="university-logo" />
-              <img src="/logos/waterloologo.webp" alt="University of Waterloo" className="university-logo" />
-              <img src="/logos/westernlogo.webp" alt="Western University" className="university-logo" />
-              <img src="/logos/mcmasterlogo.webp" alt="McMaster University" className="university-logo" />
-              <img src="/logos/queenslogo.webp" alt="Queen's University" className="university-logo" />
+              <img src="logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
+              <img src="logos/uoftlogo.webp" alt="University of Toronto" className="university-logo" />
+              <img src="logos/waterloologo.webp" alt="University of Waterloo" className="university-logo" />
+              <img src="logos/westernlogo.webp" alt="Western University" className="university-logo" />
+              <img src="logos/mcmasterlogo.webp" alt="McMaster University" className="university-logo" />
+              <img src="logos/queenslogo.webp" alt="Queen's University" className="university-logo" />
               {/* Duplicate set for seamless loop */}
-              <img src="/logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
-              <img src="/logos/uoftlogo.webp" alt="University of Toronto" className="university-logo" />
-              <img src="/logos/waterloologo.webp" alt="University of Waterloo" className="university-logo" />
-              <img src="/logos/westernlogo.webp" alt="Western University" className="university-logo" />
-              <img src="/logos/mcmasterlogo.webp" alt="McMaster University" className="university-logo" />
-              <img src="/logos/queenslogo.webp" alt="Queen's University" className="university-logo" />
+              <img src="logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
+              <img src="logos/uoftlogo.webp" alt="University of Toronto" className="university-logo" />
+              <img src="logos/waterloologo.webp" alt="University of Waterloo" className="university-logo" />
+              <img src="logos/westernlogo.webp" alt="Western University" className="university-logo" />
+              <img src="logos/mcmasterlogo.webp" alt="McMaster University" className="university-logo" />
+              <img src="logos/queenslogo.webp" alt="Queen's University" className="university-logo" />
               {/* Third set to ensure no gaps */}
-              <img src="/logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
-              <img src="/logos/uoftlogo.webp" alt="University of Toronto" className="university-logo" />
-              <img src="/logos/waterloologo.webp" alt="University of Waterloo" className="university-logo" />
-              <img src="/logos/westernlogo.webp" alt="Western University" className="university-logo" />
-              <img src="/logos/mcmasterlogo.webp" alt="McMaster University" className="university-logo" />
-              <img src="/logos/queenslogo.webp" alt="Queen's University" className="university-logo" />
+              <img src="logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
+              <img src="logos/uoftlogo.webp" alt="University of Toronto" className="university-logo" />
+              <img src="logos/waterloologo.webp" alt="University of Waterloo" className="university-logo" />
+              <img src="logos/westernlogo.webp" alt="Western University" className="university-logo" />
+              <img src="logos/mcmasterlogo.webp" alt="McMaster University" className="university-logo" />
+              <img src="logos/queenslogo.webp" alt="Queen's University" className="university-logo" />
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ function App() {
               </span>
             </div>
           </div>
-          <img src="/mockups/cameramockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
+          <img src="mockups/cameramockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
         </div>
       </div>
       <div className='big-feature'>
@@ -222,12 +222,12 @@ function App() {
                 Meet your Community
               </span>
               <span className="big-feature-badge">
-                <span className="badge-icon">🤳</span>
+                <span className="badge-icon">📱</span>
                 Share your Recipes
               </span>
             </div>
           </div>
-          <img src="/mockups/homemockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
+          <img src="mockups/homemockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
         </div>
       </div>
 
@@ -237,7 +237,7 @@ function App() {
         <div className="features-track">
           <div className="feature1">
             <div className="showcase-container">
-              <img src="/mockups/profile.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/profile.webp" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
                 <h2>Connect with Foodies</h2>
               </div>
@@ -246,7 +246,7 @@ function App() {
 
           <div className="feature2">
             <div className="showcase-container">
-              <img src="/mockups/home.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/home.webp" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
                 <h2>Scroll through your Feed</h2>
               </div>
@@ -258,12 +258,12 @@ function App() {
               <div className="showcase-content">
                 <h2>Share your Recipes</h2>
               </div>
-              <img src="/mockups/post.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/post.webp" alt="App mockup" className="mockup-image" />
             </div>
           </div>
           <div className="feature4">
             <div className="showcase-container">
-              <img src="/mockups/recipe.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/recipe.webp" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
                 <h2>Recipes Based off your Pantry</h2>
               </div>
@@ -272,7 +272,7 @@ function App() {
 
           <div className="feature5">
             <div className="showcase-container">
-              <img src="/mockups/saved.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/saved.webp" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
                 <h2>Save your Recipes</h2>
               </div>
@@ -281,7 +281,7 @@ function App() {
 
           <div className="feature6">
             <div className="showcase-container">
-              <img src="/mockups/meal prep.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/meal prep.webp" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
                 <h2>Meal Prep</h2>
               </div>
@@ -290,7 +290,7 @@ function App() {
 
           <div className="feature7">
             <div className="showcase-container">
-              <img src="/mockups/grocery.webp" alt="App mockup" className="mockup-image" />
+              <img src="mockups/grocery.webp" alt="App mockup" className="mockup-image" />
               <div className="showcase-content">
                 <h2>Plan your Groceries</h2>
               </div>
@@ -332,7 +332,7 @@ function App() {
 
         </div>
         <div className="footer-image">
-          <img src="/images/footertext2.png" alt="Footer Design" />
+          <img src="images/footertext2.png" alt="Footer Design" />
         </div>
       </footer>
     

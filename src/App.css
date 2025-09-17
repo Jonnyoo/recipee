@@ -144,7 +144,7 @@ html {
   overflow: visible;
   box-shadow: 0 2rem 3.5rem rgba(0,0,0,0.10), 0 0.5rem 2rem rgba(0,0,0,0.10);
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
@@ -165,7 +165,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: black;
   padding: 2rem;
   margin: 0;
@@ -173,6 +173,8 @@ html {
   z-index: 1;
   width: 100%;
   max-width: 800px;
+  margin-bottom: -4rem;
+  min-height: calc(40vh - 4rem);
 }
 
 .waitlist-container h1 {
@@ -189,13 +191,16 @@ html {
   gap: 2.5rem;
   margin-top: 1rem;
   padding: 3rem;
-  border-radius: 2.5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
   background: linear-gradient(140deg, rgba(5, 145, 42, 0.11), rgba(51, 124, 31, 0.611));
   backdrop-filter: blur(0.625rem);
   -webkit-backdrop-filter: blur(0.625rem);
   width: 100%;
   max-width: 500px;
   box-sizing: border-box;
+  flex: 1;
+  justify-content: flex-start;
+  margin-bottom: 0;
 }
 
 .waitlist-box form {
@@ -251,6 +256,24 @@ html {
 
 .waitlist-box button:active {
   transform: scale(1);
+}
+
+.waitlist-container .message {
+  margin: 0 0 0rem 0;
+  margin-top: -2.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.731);
+  border-radius: 2rem;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #2c5530;
+  font-weight: 500;
+  max-width:350px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -322,6 +345,7 @@ h1 {
   font-size: clamp(2rem, 5vw, 3.5rem) !important;
   color: white;
   margin-bottom: 0.5rem !important;
+  margin-top: 10rem !important;
 }
 
 .title2 {
@@ -905,6 +929,14 @@ h1 {
 }
 
 
+/* Prevent waitlist-box from growing too tall on large screens */
+/* @media (min-width: 1301px) {
+  .waitlist-box {
+    max-height: 600px;
+    flex: none;
+  }
+} */
+
 /* Mobile Responsiveness */
 @media (max-width: 1300px) {
   .main-content-food-image {
@@ -916,6 +948,10 @@ h1 {
 @media (max-width: 1500px) {
   .main-content-food-image {
     max-width: 70rem;
+  }
+
+  .title1 {
+    margin-top: 5rem !important;
   }
 
 }
@@ -973,6 +1009,7 @@ h1 {
   .waitlist-container {
     padding: 1rem;
     margin-top: 3rem;
+    margin-bottom: -2.5rem;
   }
   
   .waitlist-box {
