@@ -137,6 +137,7 @@ html {
   margin-right: 2rem;
   margin-bottom: 2rem;
   padding: 2rem;
+  padding-bottom: 10rem;
   width: calc(100% - 4rem);
   min-height: 80vh;
   max-width: 90vw;
@@ -147,6 +148,7 @@ html {
   align-items: stretch;
   justify-content: center;
 }
+
 
 .background-container::before {
   content: '';
@@ -333,6 +335,8 @@ h1 {
   z-index: 15;
   pointer-events: none;
 }
+
+
 
 .titletext h1 {
   text-align: center !important;
@@ -1251,5 +1255,76 @@ h1 {
 
 }
 
-@media (max-width: 480px) {
+/* Tablet-specific styles (between mobile and desktop) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  
+  /* Fix main content margins */
+  .main-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .background-container {
+    margin: 1.5rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: calc(100% - 3rem);
+  }
+  
+  /* Fix big feature margins and layout */
+  .big-feature {
+    margin: 4rem 2rem 6rem 2rem;
+    width: calc(100% - 4rem);
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent content overflow onto mockup */
+  .big-feature-content h1,
+  .big-feature-content h2,
+  .big-feature-content p {
+    max-width: 45%;
+    margin-left: 2rem;
+  }
+  
+  .big-feature-badges {
+    margin-left: 2rem;
+    max-width: 45%;
+  }
+  
+  .big-feature-badges-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Adjust mockup positioning for tablet */
+  .big-feature-mockup {
+    right: 2rem;
+    max-width: 16rem;
+    margin-right: 2rem;
+  }
+  
+  /* Adjust badge sizing for better fit */
+  .big-feature-badge {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+/* Additional styles for larger tablets/small laptops */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  
+  .big-feature-content h1,
+  .big-feature-content h2,
+  .big-feature-content p {
+    max-width: 60%;
+  }
+  
+  .big-feature-badges {
+    max-width: 60%;
+  }
+  
+  .big-feature-mockup {
+    max-width: 17rem;
+  }
 }
