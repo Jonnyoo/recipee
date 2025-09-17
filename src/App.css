@@ -16,7 +16,7 @@ a {
 }
 
 .scrolling-section {
-  margin-top: 8rem;
+  margin-top: 12rem;
 }
 
 .scrolling-text {
@@ -31,6 +31,7 @@ a {
   font-size: 3rem;
   color: #000;
   margin: 0;
+  line-height: 1.1;
 }
 
 .scrolling-description {
@@ -73,13 +74,13 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(0.725rem);
-  -webkit-backdrop-filter: blur(0.85rem);
-  border: 0.0625rem solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.615), rgba(255, 255, 255, 0.147));
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.80rem);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.221);
   padding: 0.6rem 1.2rem;
   border-radius: 3rem;
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.123);
   z-index: 1000;
   color: black;
   max-width: 70ch;
@@ -95,7 +96,7 @@ html {
   font-weight: 900;
   font-size: 1.5rem;
   font-family: 'Nunito Sans', sans-serif;
-  color: #365336;
+  color: #000000;
 }
 
 .nav-right {
@@ -109,7 +110,7 @@ html {
   font-size: 1.1rem;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-  color: #365336;
+  color: #000000;
 
 }
 
@@ -131,7 +132,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   margin: 1rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
@@ -312,12 +313,16 @@ h1 {
 }
 
 .title2 {
-  font-size: clamp(3rem, 8vw, 6rem) !important;
+  font-size: clamp(4rem, 10vw, 8rem) !important;
   font-weight: 900 !important;
   margin-top: 0 !important;
   font-family: 'Nunito Sans', sans-serif !important;
   text-align: center !important;
   color: white;
+}
+
+.title2 .ment-text {
+  font-size: 0.75em;
 }
 
 .scroll-row {
@@ -615,12 +620,12 @@ h1 {
 
 .big-feature-mockup {
   position: absolute;
-  right: 2rem;
+  right: 0rem;
   top: 30%;
-  transform: perspective(1300px) rotateX(15deg) rotateY(-10deg) rotateZ(12deg) translateZ(70px) translateY(-35%);
+  transform: translateY(-40%);
   max-width: 19rem;
   height: auto;
-  border-radius: 4rem;
+  border-radius: 3.3rem;
   margin-right: 6rem;
   box-shadow: 
     0 2rem 4rem rgba(0,0,0,0.25),
@@ -630,7 +635,7 @@ h1 {
 }
 
 .big-feature-mockup:hover {
-  transform: perspective(1300px) rotateX(15deg) rotateY(-13deg) rotateZ(14deg) translateZ(100px) translateY(-35%);
+  transform: perspective(1300px) rotateX(12deg) rotateY(-10deg) rotateZ(10deg) translateZ(100px) translateY(-35%);
   box-shadow: 
     0 3rem 6rem rgba(0,0,0,0.3),
     0 1.5rem 3rem rgba(0,0,0,0.2),
@@ -804,12 +809,118 @@ h1 {
   padding: 0;
 }
 
+/* Endorsement Section */
+.endorsement-section {
+  margin-top: 3rem;
+  margin-bottom: -19rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.endorsement-header {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000000c2;
+  margin: 0 0 0rem 0;
+  margin-top: 3rem;
+}
+
+.university-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.university-logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 15rem;
+}
+
+.university-logos-container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.university-logos-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.university-logos-row {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+  height: 9rem;
+  width: max-content; 
+  align-items: center;
+  animation: scrollHorizontalLogos 30s linear infinite;
+  will-change: transform;
+}
+
+.university-logo {
+  height: 14rem;
+  width: 14rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.university-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .title2 {
+    font-size: 4.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    line-height: 0.9 !important;
+  }
+
+  .title2 .ment-text {
+    font-size: 0.8em;
+    margin-top: -0.2em;
+  }
+
+  .title1 {
+    font-size: 1.5rem !important;
+  }
+
+  .titletext {
+    max-width: 18rem;
+  }
+
   .navbar {
     left: 1.5rem;
     right: 1.5rem;
     padding: 0.5rem 1rem;
+    backdrop-filter: blur(0.35rem);
   }
   
   .nav-logo {
@@ -821,20 +932,21 @@ h1 {
   }
   
   .main-content {
-    padding-top: 4rem;
+    padding-top: 0rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
   
   .background-container {
-    margin: 1.5rem;
-    width: calc(100% - 3rem);
-    min-height: 100vh;
+    margin: 0.75rem;
+    width: calc(100% - 1.5rem);
+    min-height: 80vh;
     padding: 1.5rem;
   }
   
   .waitlist-container {
     padding: 1rem;
+    margin-top: 3rem;
   }
   
   .waitlist-box {
@@ -853,20 +965,28 @@ h1 {
   }
   
   .big-feature {
-    margin: 2rem 1.5rem;
+    margin: 1rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 2rem 1.5rem;
     margin-top: 6rem;
-    width: calc(100% - 3rem);
+    width: calc(100% - 2rem);
     box-sizing: border-box;
+    border-radius: 2rem;
   }
   
-  .big-feature-content h2,
   .big-feature-content h1,
   .big-feature-content p {
     margin-left: 0;
     max-width: 100%;
+    text-align: left !important;
+    align-items: left !important;
   }
   
+.big-feature-content p {
+    font-size: 1rem;
+  }
+
   .big-feature-badges {
     margin-left: 0;
     width: 100%;
@@ -904,8 +1024,15 @@ h1 {
   }
   
   .big-feature-content {
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
+  }
+  
+  .big-feature-content h2 {
+    text-align: left !important;
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 1rem;
   }
   
   .features-track {
@@ -963,13 +1090,19 @@ h1 {
   
   .footer {
     padding: 5rem 1.5rem 0rem 1.5rem;
+    padding-top: 3rem;
+    margin-top: 7rem;
   }
   
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    text-align: center;
+    text-align: left;
     margin: 0 1rem;
+  }
+  
+  .footer-image {
+    text-align: center;
   }
   
   .features-carousel {
@@ -981,7 +1114,8 @@ h1 {
   }
   
   .feature-title {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 1.1;
     margin: 0 1.5rem 3.5rem 1.5rem;
   }
   
@@ -995,101 +1129,42 @@ h1 {
   
   .scrolling-description {
     padding: 0 1rem;
+    font-size: 1rem;
+  }
+  
+  .scrolling-rows {
+    height: 23rem;
+  }
+  
+  .scroll-box1,
+  .scroll-box2,
+  .scroll-box3,
+  .scroll-box4,
+  .scroll-box5,
+  .scroll-box6,
+  .scroll-box {
+    width: 14rem;
+    height: 18rem;
   }
 }
 
-/* Endorsement Section */
-.endorsement-section {
-  margin-top: 3rem;
-  margin-bottom: -17rem;
-  text-align: center;
-  padding: 0 2rem;
-}
-
-.endorsement-header {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem;
-  color: #000;
-  margin: 0 0 0rem 0;
-}
-
-.university-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.university-logos-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 16rem;
-}
-
-.university-logos-container::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 6rem;
-  height: 100%;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-  pointer-events: none;
-  z-index: 2;
-}
-
-.university-logos-container::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 6rem;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-  pointer-events: none;
-  z-index: 2;
-}
-
-.university-logos-row {
-  display: flex;
-  gap: 3rem;
-  position: relative;
-  height: 16rem;
-  width: max-content; 
-  align-items: center;
-  animation: scrollHorizontalLogos 30s linear infinite;
-  will-change: transform;
-}
-
-.university-logo {
-  height: 14rem;
-  width: 14rem;
-  object-fit: contain;
-  flex-shrink: 0;
-  filter: grayscale(1);
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.university-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
-  transform: scale(1.1);
-}
-
 @media (max-width: 768px) {
+  /* Hide gradient overlays on scrolling rows */
+  .scrolling-rows::after,
+  .scrolling-rows::before {
+    display: none;
+  }
+  
+  /* Adjust endorsement section for smaller screens */
   .endorsement-section {
-    margin-top: 4rem;
-    margin-bottom: -15rem;
+    margin-top: 2rem;
+    margin-bottom: -17rem;
     padding: 0 1.5rem;
   }
   
   .endorsement-header {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: -2rem;
   }
   
   .university-logos {
@@ -1097,40 +1172,20 @@ h1 {
   }
   
   .university-logos-container {
-    height: 14rem;
+    height: 10rem;
   }
   
   .university-logos-row {
     gap: 3rem;
-    height: 14rem;
+    height: 10rem;
   }
   
   .university-logo {
-    height: 12rem;
-    width: 12rem;
+    height: 8rem;
+    width: 8rem;
   }
+
 }
 
 @media (max-width: 480px) {
-  .endorsement-header {
-    font-size: 1.8rem;
-  }
-  
-  .university-logos {
-    gap: 1.5rem;
-  }
-  
-  .university-logos-container {
-    height: 12rem;
-  }
-  
-  .university-logos-row {
-    gap: 2.5rem;
-    height: 12rem;
-  }
-  
-  .university-logo {
-    height: 10rem;
-    width: 10rem;
-  }
 }

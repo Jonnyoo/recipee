@@ -83,7 +83,7 @@ function App() {
           <div id="waitlist" className="waitlist-container">
             <div className="titletext">
               <h1 className="title1">JOIN THE</h1>
-              <h1 className="title2"><span style={{ color: '#3e974bff' }}>MUNCH</span>-MENT</h1>
+              <h1 className="title2"><span style={{ color: '#3e974bff' }}>MUNCH</span>MENT</h1>
             </div>
             <div className="waitlist-box">
               <form onSubmit={handleJoinWaitlist}>
@@ -111,7 +111,7 @@ function App() {
         </div>
         
         <div className="endorsement-section">
-          <h2 className="endorsement-header">Loved by Students From</h2>
+          <h2 className="endorsement-header">Loved by students at top schools</h2>
           <div className="university-logos-container">
             <div className="university-logos-row">
               <img src="/logos/carletonlogo.webp" alt="Carleton University" className="university-logo" />
@@ -327,7 +327,7 @@ function App() {
 
         </div>
         <div className="footer-image">
-          <img src="/images/footertext.webp" alt="Footer Design" />
+          <img src="/images/footertext2.png" alt="Footer Design" />
         </div>
       </footer>
     
