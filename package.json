@@ -1,7 +1,7 @@
 {
   "name": "recipe",
   "private": true,
-  "homepage": "https://hacky-wacky-team.github.io/munch",
+  "homepage": "https://jointhemunch.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "echo 'jointhemunch.app' > build/CNAME"
   },
   "dependencies": {
     "firebase": "^12.1.0",
