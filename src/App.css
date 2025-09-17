@@ -127,7 +127,7 @@ html {
 }
 
 .background-container {
-  background-image: url('/images/background.png');
+  background-image: url('/images/background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -375,52 +375,52 @@ h1 {
 }
 
 .scroll-box1 {
-  background-image: url('/images/post 1.png');
+  background-image: url('/images/post 1.webp');
 }
 
 .scroll-box2 {
-  background-image: url('/images/post 2.png');
+  background-image: url('/images/post 2.webp');
 }
 
 .scroll-box3 {
-  background-image: url('/images/post 3.png');
+  background-image: url('/images/post 3.webp');
 }
 
 .scroll-box4 {
-  background-image: url('/images/post 4.png');
+  background-image: url('/images/post 4.webp');
 }
 
 .scroll-box5 {
-  background-image: url('/images/post 5.png');
+  background-image: url('/images/post 5.webp');
 }
 
 .scroll-box6 {
-  background-image: url('/images/post 6.png');
+  background-image: url('/images/post 6.webp');
 }
 
 /* Box color classes for duplicated elements */
 .box-color-1 {
-  background-image: url('/images/post 1.png');
+  background-image: url('/images/post 1.webp');
 }
 
 .box-color-2 {
-  background-image: url('/images/post 2.png');
+  background-image: url('/images/post 2.webp');
 }
 
 .box-color-3 {
-  background-image: url('/images/post 3.png');
+  background-image: url('/images/post 3.webp');
 }
 
 .box-color-4 {
-  background-image: url('/images/post 4.png');
+  background-image: url('/images/post 4.webp');
 }
 
 .box-color-5 {
-  background-image: url('/images/post 5.png');
+  background-image: url('/images/post 5.webp');
 }
 
 .box-color-6 {
-  background-image: url('/images/post 6.png');
+  background-image: url('/images/post 6.webp');
 }
 
 @keyframes scrollHorizontal {
@@ -581,7 +581,7 @@ h1 {
   justify-content: center;
   align-items: flex-start;
   margin: 4rem auto 6rem auto;
-  background-image: url('/images/bigfeaturebackground.png');
+  background-image: url('/images/bigfeaturebackground.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
