@@ -1057,16 +1057,17 @@ h1 {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 0;
     margin: 0;
     box-sizing: border-box;
     width: 100%;
   }
 
   .mockup-image {
-    width: 14rem;
+    width: 17rem;
     height: auto;
-    max-height: 28rem;
+    max-height: 30rem;
   }
 
   .phone-mockup {
