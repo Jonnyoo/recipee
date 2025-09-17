@@ -111,7 +111,7 @@ function App() {
         </div>
         
         <div className="endorsement-section">
-          <h2 className="endorsement-header">Loved by Students From...</h2>
+          <h2 className="endorsement-header">Loved by Students From</h2>
           <div className="university-logos-container">
             <div className="university-logos-row">
               <img src="/logos/carletonlogo.png" alt="Carleton University" className="university-logo" />
