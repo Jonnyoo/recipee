@@ -432,6 +432,15 @@ h1 {
   }
 }
 
+@keyframes scrollHorizontalLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
 .features-carousel {
   position: relative;
   width: 100%;
@@ -986,5 +995,142 @@ h1 {
   
   .scrolling-description {
     padding: 0 1rem;
+  }
+}
+
+/* Endorsement Section */
+.endorsement-section {
+  margin-top: 3rem;
+  margin-bottom: -17rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.endorsement-header {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #000;
+  margin: 0 0 0rem 0;
+}
+
+.university-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.university-logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 16rem;
+}
+
+.university-logos-container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.university-logos-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.university-logos-row {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+  height: 16rem;
+  width: max-content; 
+  align-items: center;
+  animation: scrollHorizontalLogos 30s linear infinite;
+  will-change: transform;
+}
+
+.university-logo {
+  height: 14rem;
+  width: 14rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.university-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .endorsement-section {
+    margin-top: 4rem;
+    margin-bottom: -15rem;
+    padding: 0 1.5rem;
+  }
+  
+  .endorsement-header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .university-logos {
+    gap: 2rem;
+  }
+  
+  .university-logos-container {
+    height: 14rem;
+  }
+  
+  .university-logos-row {
+    gap: 3rem;
+    height: 14rem;
+  }
+  
+  .university-logo {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .endorsement-header {
+    font-size: 1.8rem;
+  }
+  
+  .university-logos {
+    gap: 1.5rem;
+  }
+  
+  .university-logos-container {
+    height: 12rem;
+  }
+  
+  .university-logos-row {
+    gap: 2.5rem;
+    height: 12rem;
+  }
+  
+  .university-logo {
+    height: 10rem;
+    width: 10rem;
   }
 }

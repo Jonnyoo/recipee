@@ -109,7 +109,34 @@ function App() {
             </div>
           </div>
         </div>
-
+        
+        <div className="endorsement-section">
+          <h2 className="endorsement-header">Loved by Students From...</h2>
+          <div className="university-logos-container">
+            <div className="university-logos-row">
+              <img src="/logos/carletonlogo.png" alt="Carleton University" className="university-logo" />
+              <img src="/logos/uoftlogo.png" alt="University of Toronto" className="university-logo" />
+              <img src="/logos/waterloologo.png" alt="University of Waterloo" className="university-logo" />
+              <img src="/logos/westernlogo.png" alt="Western University" className="university-logo" />
+              <img src="/logos/mcmasterlogo.png" alt="McMaster University" className="university-logo" />
+              <img src="/logos/queenslogo.png" alt="Queen's University" className="university-logo" />
+              {/* Duplicate set for seamless loop */}
+              <img src="/logos/carletonlogo.png" alt="Carleton University" className="university-logo" />
+              <img src="/logos/uoftlogo.png" alt="University of Toronto" className="university-logo" />
+              <img src="/logos/waterloologo.png" alt="University of Waterloo" className="university-logo" />
+              <img src="/logos/westernlogo.png" alt="Western University" className="university-logo" />
+              <img src="/logos/mcmasterlogo.png" alt="McMaster University" className="university-logo" />
+              <img src="/logos/queenslogo.png" alt="Queen's University" className="university-logo" />
+              {/* Third set to ensure no gaps */}
+              <img src="/logos/carletonlogo.png" alt="Carleton University" className="university-logo" />
+              <img src="/logos/uoftlogo.png" alt="University of Toronto" className="university-logo" />
+              <img src="/logos/waterloologo.png" alt="University of Waterloo" className="university-logo" />
+              <img src="/logos/westernlogo.png" alt="Western University" className="university-logo" />
+              <img src="/logos/mcmasterlogo.png" alt="McMaster University" className="university-logo" />
+              <img src="/logos/queenslogo.png" alt="Queen's University" className="university-logo" />
+            </div>
+          </div>
+        </div>
         
         <div className="scrolling-section">
           <div className="scrolling-text">
