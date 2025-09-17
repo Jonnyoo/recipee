@@ -139,7 +139,7 @@ html {
   padding: 2rem;
   padding-bottom: 10rem;
   width: calc(100% - 4rem);
-  min-height: 80vh;
+  min-height: 68vh;
   max-width: 90vw;
   position: relative;
   overflow: visible;
@@ -175,8 +175,8 @@ html {
   z-index: 1;
   width: 100%;
   max-width: 800px;
-  margin-bottom: -4rem;
-  min-height: calc(40vh - 4rem);
+  margin-bottom: -12rem;
+  min-height: calc(60vh - 4rem);
 }
 
 .waitlist-container h1 {
@@ -954,10 +954,12 @@ h1 {
     max-width: 70rem;
   }
 
-  .title1 {
-    margin-top: 5rem !important;
-  }
+}
 
+@media (max-width: 1700px) {
+  .title1 {
+    margin-top: 3rem !important;
+  }
 }
 
 @media (max-width: 768px) {
