@@ -55,7 +55,7 @@ function App() {
           <span className="nav-logo">MUNCH</span>
         </div>
         <div className="nav-right">
-          <a href="#waitlist"><span className="nav-item">Waitlist</span></a>
+          <a href="#waitlist"><span className="nav-item waitlist-button">Join Waitlist</span></a>
         </div>
       </nav>
       <div className="main-content">
@@ -202,6 +202,7 @@ function App() {
       <div className='big-feature'>
 
         <div className='big-feature-content'>
+          <div>
           <h2>PERSONALIZED FEED</h2>
           <h1>Always one scroll away from your next meal</h1>
           <p>View what your friends are cooking and get real time inspiration! Share your food pics and discover new recipes together.</p>
@@ -226,6 +227,7 @@ function App() {
                 Share your Recipes
               </span>
             </div>
+          </div>
           </div>
           <img src="mockups/homemockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
         </div>
