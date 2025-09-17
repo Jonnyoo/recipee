@@ -956,7 +956,7 @@ h1 {
 
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1800px) {
   .title1 {
     margin-top: 3rem !important;
   }
@@ -1008,7 +1008,7 @@ h1 {
   .background-container {
     margin: 0.75rem;
     width: calc(100% - 1.5rem);
-    min-height: 80vh;
+    min-height: 82vh;
     padding: 1.5rem;
   }
   
@@ -1027,6 +1027,10 @@ h1 {
   .waitlist-box button {
     font-size: 1rem;
     padding: 1rem 1.2rem;
+  }
+
+  .waitlist-box button {
+    margin-bottom: 1rem;
   }
   
   .title-sticker {
