@@ -129,10 +129,10 @@ function App() {
     <>
       <nav className="navbar">
         <div className="nav-left">
-          <span className="nav-logo">MUNCH</span>
+          <span className="nav-logo" style={{ color: '#243924ff' }}>MUNCH</span>
         </div>
         <div className="nav-right">
-          <a href="#waitlist"><span className="nav-item waitlist-button">Join Waitlist</span></a>
+          <a href="#waitlist"><span className="nav-item" style={{ color: '#243924ff' }}>Join Waitlist</span></a>
         </div>
       </nav>
       <div className="main-content">
