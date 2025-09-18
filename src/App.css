@@ -124,7 +124,6 @@ html {
   align-items: center;
   min-height: 100vh;
   justify-content: flex-start;
-  padding-top: 1rem;
 }
 
 .background-container {
@@ -133,10 +132,11 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 2rem;
-  margin: 1rem;
-  margin-right: 2rem;
+  margin: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  padding: 2rem;
+  padding: 2.5rem;
   padding-bottom: 10rem;
   width: calc(100% - 4rem);
   min-height: 68vh;
@@ -691,7 +691,7 @@ h1 {
   max-width: 19rem;
   height: auto;
   border-radius: 3.3rem;
-  margin-right: 1rem;
+  margin-right: 3rem;
   box-shadow: 
     0 2rem 4rem rgba(0,0,0,0.25),
     0 1rem 2rem rgba(0,0,0,0.15),
@@ -959,25 +959,88 @@ h1 {
 }
 
 
-/* Prevent waitlist-box from growing too tall on large screens */
-/* @media (min-width: 1301px) {
+/* Prevent content from extending too far on large screens */
+@media (min-width: 1501px) {
+  
+  .background-container {
+    max-height: 80vh !important;
+    min-height: 77vh;
+    
+  }
+  
+  .main-content-food-image {
+    max-width: 82rem;
+    max-height: 82vh;
+    object-fit: contain;
+  }
+  
+  .waitlist-container {
+    justify-content: flex-end;
+    height: 100%;
+  }
+  
   .waitlist-box {
     max-height: 600px;
     flex: none;
   }
-} */
+
+  .title1 {
+    margin-top: 6rem !important;
+  }
+
+  .background-container {
+    max-width: 93vw;
+  }
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 1300px) {
   .main-content-food-image {
-    max-width: 60rem;
+    max-width: 46rem !important;
   }
+
+  .big-feature {
+    padding: 2.5rem 1rem;
+    width: calc(80% - 3rem);
+    min-height: 29rem;
+  }
+
+  .big-feature-mockup {
+    max-width: 16rem !important;
+    margin-right: 2.5rem;
+    top: 35%;
+    border-radius: 2.7rem;
+  }
+
+  .big-feature-content h1 {
+    font-size: 2.5rem;
+  }
+  .big-feature-content p {
+    font-size: 1rem;
+  }
+  .big-feature-badge {
+    font-size: 0.9rem;
+  }
+
+  .features-track {
+    padding: 0 5vw 1rem calc(max((100vw - 90ch) / 2, 2rem));
+  }
+
+  .scrolling-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .main-content-food-image {
+    max-width: 50rem !important;
+  }
+
 
 }
 
 @media (max-width: 1500px) {
   .main-content-food-image {
-    max-width: 70rem;
+    max-width: 50rem !important;
   }
 
   .title2 {
