@@ -273,7 +273,7 @@ function App() {
               </span>
             </div>
           </div>
-          <img src="mockups/cameramockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
+          <img src="mockups/cameramockup2.webp" alt="Camera Mockup" className="big-feature-mockup" />
         </div>
       </div>
       <div className='big-feature'>
@@ -306,7 +306,7 @@ function App() {
             </div>
           </div>
           </div>
-          <img src="mockups/homemockup.webp" alt="Camera Mockup" className="big-feature-mockup" />
+          <img src="mockups/homemockup2.webp" alt="Camera Mockup" className="big-feature-mockup" />
         </div>
       </div>
 
