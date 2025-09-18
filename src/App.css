@@ -96,7 +96,7 @@ html {
   font-weight: 900;
   font-size: 1.5rem;
   font-family: 'Nunito Sans', sans-serif;
-  color: #000000;
+  color: #243924ff;
 }
 
 .nav-right {
@@ -246,13 +246,6 @@ html {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.waitlist-box .message {
-  margin: 0;
-  padding: 0.5rem 0;
-  font-size: 1rem;
-  text-align: center;
-}
-
 .waitlist-box button:hover {
   background-color: #0c320c;
 }
@@ -261,22 +254,26 @@ html {
   transform: scale(1);
 }
 
-.waitlist-container .message {
-  margin: 0 0 0rem 0;
-  margin-top: -2.5rem;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
+.background-container .message {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.731);
+  background-color: rgba(255, 255, 255, 0.78) !important;
   border-radius: 2rem;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #2c5530;
-  font-weight: 500;
-  max-width:350px;
-  width: 100%;
+  font-weight: 600;
+  max-width: 400px;
   box-sizing: border-box;
+  z-index: 999;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.196);
 }
 
 h1 {
@@ -960,7 +957,8 @@ h1 {
 
 
 /* Prevent content from extending too far on large screens */
-@media (min-width: 1501px) {
+
+@media (min-width: 1601px) {
   
   .background-container {
     max-height: 80vh !important;
@@ -976,16 +974,15 @@ h1 {
   
   .waitlist-container {
     justify-content: flex-end;
-    height: 100%;
   }
   
   .waitlist-box {
-    max-height: 600px;
+    max-height: 550px;
     flex: none;
   }
 
   .title1 {
-    margin-top: 6rem !important;
+    margin-top: 8rem !important;
   }
 
   .background-container {
@@ -993,10 +990,53 @@ h1 {
   }
 }
 
+@media (max-width: 1600px) {
+  .main-content-food-image {
+    max-width: 50rem;
+  }
+
+  .title2 {
+    font-size: 6rem !important;
+  }
+
+  .waitlist-container {
+    justify-content: flex-end;
+  }
+
+  .waitlist-box {
+    padding: 2.5rem 2rem;
+    max-width: 400px;
+    flex: none;
+    min-height: 420px;
+  }
+
+  .waitlist-box input,
+  .waitlist-box button {
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .feature1,
+.feature2,
+.feature3,
+.feature4,
+.feature5,
+.feature6,
+.feature7 {
+    max-width: 20rem;
+  }
+
+  .title1 {
+    margin-top: 4rem !important;
+    font-size: 3rem !important;
+  }
+
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1300px) {
   .main-content-food-image {
-    max-width: 46rem !important;
+    max-width: 44rem !important;
   }
 
   .big-feature {
@@ -1031,52 +1071,25 @@ h1 {
     max-width: 600px;
   }
 
-  .main-content-food-image {
-    max-width: 50rem !important;
-  }
-
-
-}
-
-@media (max-width: 1500px) {
-  .main-content-food-image {
-    max-width: 50rem !important;
-  }
-
-  .title2 {
-    font-size: 6rem !important;
+  .title1 {
+    margin-top: 2rem !important;
   }
 
   .waitlist-box {
-    padding: 2.5rem 2rem;
-    max-width: 400px;
+    margin-top: -1rem;
+    padding: 2rem 1.5rem;
+    max-width: 360px;
+    min-height: 360px;
   }
 
   .waitlist-box input,
   .waitlist-box button {
-    font-size: 1.1rem;
-    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
   }
 
-  .main-content-food-image {
-    max-width: 60rem;
-  }
-
-  .feature1,
-.feature2,
-.feature3,
-.feature4,
-.feature5,
-.feature6,
-.feature7 {
-    max-width: 20rem;
-  }
-
-}
-
-@media (max-width: 1800px) {
-  .title1 {
-    margin-top: 3rem !important;
+  .background-container {
+    max-height: 60vh !important;
   }
 }
 
@@ -1133,6 +1146,10 @@ h1 {
     min-height: 82vh;
     padding: 1.5rem;
   }
+
+  .background-container .message {
+    bottom: 1rem;
+  }
   
   .waitlist-container {
     padding: 1rem;
@@ -1141,9 +1158,10 @@ h1 {
   }
   
   .waitlist-box {
-    padding: 2rem 1.5rem;
-    padding-bottom: 25vw;
-    margin-top: 0.5rem;
+    padding: 1.5rem 1.5rem;
+    padding-bottom: 3rem;
+    max-height: 350px !important;
+    min-height: auto !important;
   }
   
   .waitlist-box input,
@@ -1177,9 +1195,10 @@ h1 {
     max-width: 100%;
     text-align: left !important;
     align-items: left !important;
+    margin-right: 0;
   }
   
-.big-feature-content p {
+  .big-feature-content p {
     font-size: 1rem;
   }
 
@@ -1207,7 +1226,7 @@ h1 {
   .big-feature-mockup {
     position: static;
     transform: none;
-    max-width: 100%;
+    max-width: 100% !important;
     margin: 2rem 0 0 0;
     order: 3;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
@@ -1460,8 +1479,12 @@ h1 {
 
 
 .waitlist-button{
-  background-color: #1c9f30;
-  border-radius: 15px;
-  padding: 0.3rem 0.6rem;
-  color: #f0fcf3;
+  background-color: #8dc9977a;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  color: #002509c7;
+  font-size: 1.1rem;
+  margin-right: -0.5rem;
+  backdrop-filter: blur(0.3rem);
+  -webkit-backdrop-filter: blur(0.3rem);
 }

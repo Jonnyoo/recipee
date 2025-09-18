@@ -162,12 +162,12 @@ function App() {
             alt="Main Content Food" 
             className="main-content-food-image"
           />
+          {message && <p className="message">{message}</p>}
           <div id="waitlist" className="waitlist-container">
             <div className="titletext">
               <h1 className="title1">JOIN THE</h1>
               <h1 className="title2"><span style={{ color: '#3e974bff' }}>MUNCH</span>MENT</h1>
             </div>
-            {message && <p className="message">{message}</p>}
             <div className="waitlist-box">
               <form onSubmit={handleJoinWaitlist}>
                 <input
