@@ -482,7 +482,7 @@ h1 {
   background: #f0fcf3;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
-  border-radius: 3rem;
+  border-radius: 2.5rem;
   user-select: none;
   border: 0.13rem solid rgba(216, 216, 216, 0.302);
 }
@@ -498,6 +498,7 @@ h1 {
   padding: 0rem;
   box-sizing: border-box;
   flex-direction: column;
+
 }
 
 .mockup-image {
